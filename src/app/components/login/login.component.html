@@ -1,0 +1,47 @@
+<main>
+      <div class="text-center" id="login_container">
+            <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+                  <h1 class="h3 m-3 pt-3">Iniciar sesión</h1>
+                  <div class="m-3 pb-3">
+                        <div class="form-floating">
+                              <input type="email" formControlName="mail" class="form-control" id="floatingInput" placeholder="name@example.com">
+                              <label for="email floatingInput">Correo Electronico</label>
+                        </div>
+                        <div *ngIf="Mail?.errors && Mail?.touched">
+                              <p *ngIf="Mail?.hasError('required')" class="error text-start ms-1">
+                                    Ingresa un email válido.
+                              </p>
+                              <p *ngIf="Mail?.hasError('email')" class="error text-start ms-1">
+                                    Correo Electronico invalido.
+                              </p>
+                        </div>
+                  </div>
+                  <div class="m-3 pb-3">
+                        <div class="form-floating">
+                              <input class="form-control" type="password" formControlName="password" [class.border-danger]="MailValid" placeholder="Password" id="floatingPassword">
+                              <label for="exampleInputPassword1 floatingPassword" class="form-label">Contraseña</label>
+                        </div>
+                        <div *ngIf="Password?.errors  && Password?.touched">
+
+                              <p *ngIf="Password?.hasError('required')" class="error text-start ms-1">
+                              La contraseña es requerida.
+                              </p>
+
+                              <p *ngIf="Password?.errors?.['minlength']" class="error text-start ms-1">
+                              La contraseña debe de ser de minimo 8 caracteres.
+                              </p>
+
+                        </div>
+                  </div>
+                        <div>
+                              <button type="submit" class="btn_md btn-danger hvr-underline-from-center">Iniciar sesión</button>
+                        </div>
+            </form>
+      </div>
+</main>
+<!--<div>
+      <p>Un debuger para mostrar que es posible hacer un binding directo al formulario <strong>{{form.value.email}} </strong><strong>{{form.value.password}} </strong><p> 
+
+<br>
+
+</div> -->

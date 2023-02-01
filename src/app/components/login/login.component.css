@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+label {
+      color: gray;
+      font-family: 'Signika', sans-serif;
+}
+input {
+      background: #181818;
+}
+
+form {
+      background-color: #f7a501;
+      border-radius: 5px;
+      font-family: 'Signika', sans-serif;
+      color: #f9f9f9;
+}
+
+/*  Login Container  */
+
+#login_container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 35%;
+      height: 50%;
+}
+
+.form-control {
+      color: white;
+      border: 0px solid #f9f9f9;
+      border-bottom: 5px solid #f9f9f9;
+}
+
+.form-control:focus {
+      background-color: #181818;
+      box-shadow: 0 0 0 0.25rem rgba(13, 109, 253, 0);
+}
+
+.error {
+      color: rgb(0, 0, 0);
+}
+
+/*  Fuente/s  
+
+.font_login {
+      font-family: 'Signika', sans-serif;
+}
+
+.font_lilita {
+      font-family: 'Lilita One', cursive;
+}
+
+*/
+/* Boton de Iniciar Sesion y efecto hover */
+.btn_md {
+      background: #181818;
+      color: white;
+      border-radius: 5px;
+      border: 0px;
+      padding: 10px 50px;
+      margin: 10px;
+}
+
+.hvr-underline-from-center {
+      display: inline-block;
+      vertical-align: middle;
+      -webkit-transform: perspective(1px) translateZ(0);
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      position: relative;
+      overflow: hidden;
+    }
+.hvr-underline-from-center:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 51%;
+      right: 51%;
+      bottom: 0;
+      background: #f9f9f9;
+      height: 4px;
+      -webkit-transition-property: left, right;
+      transition-property: left, right;
+      -webkit-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease-out;
+      transition-timing-function: ease-out;
+}
+.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+      left: 0;
+      right: 0;
+}

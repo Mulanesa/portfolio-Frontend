@@ -1,0 +1,106 @@
+.container-fluid {
+      background-color: #1A1C1E;
+}
+
+.c-about {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+}
+
+.s_font {
+      font-family: 'Lilita One', cursive;
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+      color: #f7a501;
+}
+
+.lead {
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+      color: #f9f9f9;
+}
+
+/* Sombreado */
+.dshadow_i {
+      filter: drop-shadow(8px 8px 4px #000000);
+}
+
+/*  h-card  */
+
+#skills {
+      -webkit-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
+      box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
+      background-color: #f7a501;
+}
+
+.h_font {
+      font-family: 'Lilita One', cursive;
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+      color: #f9f9f9;
+}
+
+.s-card {
+      width: 200px;
+      padding: 5px;
+      margin: 5px 2px 5px 2px;
+      border-radius: 10px;
+      background-color: #f9f9f9bd;
+}
+
+.c-skills {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+}
+
+.b-card {
+      background-color: #1A1C1E;
+      text-align: center;
+      color: white;
+      border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+      .c-skills {
+            display: grid;
+      }
+      .img-fluid {
+            display: none;
+      }
+}
+
+
+/* Modal */
+
+.modal-header, .modal-footer {
+      border-top: 0px;
+      border-bottom: 0px;
+}
+
+.hr {
+      margin: 0px 20px 0px 20px;
+}
+
+.modal-title {
+      font-family: 'Lilita One', cursive;
+      color: #f7a501;
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+}
+
+.rs_img {	
+      animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+      0% {
+            transform: translatey(0px);
+      }
+      50% {
+            transform: translatey(-20px);
+      }
+      100% {
+            transform: translatey(0px);
+      }
+}
