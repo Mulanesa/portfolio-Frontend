@@ -1,16 +1,11 @@
 <app-navbar></app-navbar>
-<ng-template #contenido let-modal>
+<ng-template #htmlmodal let-modal>
       <div class="modal-header">
-            <h4 class="modal-title text-center">Titulo</h4>
-            <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+            <h4 class="modal-title text-center">FrontEnd Lineage 2</h4>
+            <button type="button" class="close_btn" aria-label="Close" (click)="modal.dismiss('Cross click')"><fa-icon [icon]="faXmark"></fa-icon></button>
       </div>
-      <hr class="hr">
       <div class="modal-body">
-            Content
-      </div>
-      <hr class="hr">
-      <div class="modal-footer">
-            <button type="button" class="btn btn-success" (click)="modal.close()">Salir</button>
+            <p>Estoy trabajando en un proyecto propio</p>
       </div>
 </ng-template>
 <main>
@@ -76,28 +71,11 @@
             </div>
       </section>
       <section>
-            <div class="container-fluid" style="height: 50vh;" id="proyectos">
-                  <div class="text-center m-5">
-                        <h3 class="s_font">Mis Proyectos</h3>
-                  </div>
-                  <div class="row">
-                        <div class="col p-card m-3">
-                              <div class="float-start mx-3" style="background-color: brown;">
-                                    <img class="img-fluid dshadow_i" src="../../../assets/img/proyectos/ll2.png" alt="Logo de Lineage 2" width="202px">
-                              </div>
-                              <div class="p-3">
-                                    <h3 class="s_font">Front L2</h3>
-                                    <p class="lead my-3">Estoy haciendo una plantilla (frontend) de uso propio para servidores de "Lineage 2", y ahorrarme algo de tiempo.</p>
-                              </div>
-                        </div>
-                        <div class="col p-card m-3">
-                              <div class="float-start mx-3" style="background-color: brown;">
-                                    <img class="img-fluid dshadow_i" src="../../../assets/img/proyectos/ll2.png" alt="#" width="202px">
-                              </div>
-                              <div class="p-3">
-                                    <h3 class="s_font">N/A</h3>
-                                    <p class="lead">N/A</p>
-                              </div>
+            <div class="container-fluid p-5" id="proyectos">
+                  <h2 class="p_font text-center">Proyectos Personales</h2>
+                  <div class="a-proyectos">
+                        <div class="p-card" (click)="openCenteredLG(htmlmodal)">
+                              <img class="dshadow_i" src="../../../assets/img/proyectos/ll2.png" alt="Logo de HTML5" style="width: 100%;">
                         </div>
                   </div>
             </div>

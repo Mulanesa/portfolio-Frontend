@@ -81,21 +81,40 @@
 
 
 /* Modal */
-
-.modal-header, .modal-footer {
-      border-top: 0px;
-      border-bottom: 0px;
+.modal-body, .modal-footer, .modal-header {
+      background-color: #1A1C1E;
+      color: white;
 }
-
+.modal-header, .modal-footer {
+      border-radius: 0px;
+}
+.close_btn {
+      color: #f9f9f9;
+      background: #f7a501bd;
+      border: 0px transparent;
+      border-radius: 5px;
+      padding: 0px 5px 0px 5px;
+      transition: .5s, color .10s;
+}
+.close_btn:hover {
+      background: #f7a501;
+}
 .hr {
       margin: 0px 20px 0px 20px;
 }
-
+/*
+.modal-body, .modal-footer, .modal-header {
+      color: #f9f9f9;
+      background: #1A1C1E;
+}
+*/
 .modal-title {
       font-family: 'Lilita One', cursive;
-      color: #f7a501;
+      color: #f9f9f9;
       text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
 }
+
+/* Animacion Flotar */
 
 .rs_img {	
       animation: float 6s ease-in-out infinite;
@@ -115,12 +134,39 @@
 
 /* proyectos card */
 
-.p-card {
-      background: #101010;
-      width: 570px;
-      border-radius: 5px;
+.p_font {
+      font-family: 'Lilita One', cursive;
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+      color: #f7a501;
 }
 
 .p-card .lead {
       font-size: 16px;
+}
+
+.p-card {
+      width: 200px;
+      padding: 5px;
+      margin: 5px 2px 5px 2px;
+      border-radius: 10px;
+      background-color: #a52a2abd;
+      cursor: pointer;
+      transition: .5s, color .10s;
+      -webkit-transition: .5s, color .10s;
+      -moz-transition: .5s, color .10s;
+}
+
+.p-card:hover {
+      width: 220px;
+      margin-top: 10px;
+      transform: translate(0px,-20px);
+      -webkit-transform: translate(0px,-20px);
+      -moz-transform:translate(0px,-20px);
+}
+
+.a-proyectos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
 }
