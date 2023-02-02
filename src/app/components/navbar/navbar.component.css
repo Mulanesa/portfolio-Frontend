@@ -4,7 +4,8 @@
 
 .fontNav {
   color: white;
-  font-family: 'Lilita One', cursive;
+  font-family: monospace;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: 20px;
 }

@@ -2,7 +2,14 @@
       background-color: #1A1C1E;
 }
 
-.c-about {
+.dv_center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+}
+
+.c-skills {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -36,9 +43,9 @@
 /*  h-card  */
 
 #skills {
-      -webkit-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
-      -moz-box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
-      box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
+      -webkit-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
+      box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
       background-color: #f7a501;
 }
 
@@ -53,14 +60,7 @@
       padding: 5px;
       margin: 5px 2px 5px 2px;
       border-radius: 10px;
-      background-color: #f9f9f9bd;
-}
-
-.c-skills {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: auto;
+      background-color: #896262bd;
 }
 
 .b-card {
@@ -164,9 +164,36 @@
       -moz-transform:translate(0px,-20px);
 }
 
-.a-proyectos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+/* Contact */
+#contact {
+      background: #f7a501;
+      -webkit-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
+      -moz-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
+      box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
+      color: #f9f9f9;
+}
+
+#contact input, textarea {
+      background-color: #1A1C1E;
+      box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
+      border: transparent;
+      color: #f9f9f9;
+}
+
+#contact textarea:focus {
+      box-shadow: inset 0px 0px 25px 0px rgba(0,0,0,0.75);
+      background: #1A1C1E;
+      color: #f9f9f9;
+}
+
+form {
+      background-color: #896262bd;
+      padding: 25px;
+      border-radius: 10px;
+      width: 50%;
       margin: auto;
+}
+
+::-webkit-input-placeholder {
+      color: #f9f9f9bd;
 }

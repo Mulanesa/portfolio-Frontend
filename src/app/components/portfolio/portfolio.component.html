@@ -10,7 +10,7 @@
 </ng-template>
 <main>
       <section>
-            <div class="container-fluid vh-100 p-5 c-about" id="aboutme">
+            <div class="container-fluid vh-100 p-5 dv_center" id="aboutme">
                   <div class="col-md-6 px-0">
                         <h5 class="sb_font">Buenas, soy</h5>
                         <h1 class="display-5 s_font">Mulanesa</h1>
@@ -73,11 +73,30 @@
       <section>
             <div class="container-fluid p-5" id="proyectos">
                   <h2 class="p_font text-center">Proyectos Personales</h2>
-                  <div class="a-proyectos">
+                  <div class="dv_center">
                         <div class="p-card" (click)="openCenteredLG(htmlmodal)">
                               <img class="dshadow_i" src="../../../assets/img/proyectos/ll2.png" alt="Logo de HTML5" style="width: 100%;">
                         </div>
                   </div>
+            </div>
+      </section>
+      <section>
+            <div class="container-fluid p-5" id="contact">
+                  <h2 class="h_font text-center">Contactame</h2>
+                  <form action="#">
+                        <div class="mb-3">
+                              <label for="name" class="form-label">Nombre</label>
+                              <input type="textname" class="form-control" id="name" placeholder="Nombre">
+                        </div>
+                        <div class="mb-3">
+                              <label for="email" class="form-label">Correo electronico</label>
+                              <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                              <label for="textarea" class="form-label">Mensaje</label>
+                              <textarea class="form-control" id="textarea" rows="6" placeholder="Mensaje"></textarea>
+                        </div>
+                  </form>
             </div>
       </section>
 </main>
