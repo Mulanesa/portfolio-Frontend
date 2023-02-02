@@ -13,6 +13,14 @@
       font-family: 'Lilita One', cursive;
       text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
       color: #f7a501;
+      margin: 0px;
+}
+
+.sb_font {
+      font-family: 'Lilita One', cursive;
+      text-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+      color: #f9f9f9;
+      margin: 0px;
 }
 
 .lead {
@@ -103,4 +111,16 @@
       100% {
             transform: translatey(0px);
       }
+}
+
+/* proyectos card */
+
+.p-card {
+      background: #101010;
+      width: 570px;
+      border-radius: 5px;
+}
+
+.p-card .lead {
+      font-size: 16px;
 }
