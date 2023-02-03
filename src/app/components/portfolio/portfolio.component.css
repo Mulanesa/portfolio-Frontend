@@ -70,16 +70,6 @@
       border-radius: 10px;
 }
 
-@media screen and (max-width: 900px) {
-      .c-skills {
-            display: grid;
-      }
-      .img-fluid {
-            display: none;
-      }
-}
-
-
 /* Modal */
 .modal-body, .modal-footer, .modal-header {
       background-color: #1A1C1E;
@@ -195,4 +185,13 @@ form {
 
 ::-webkit-input-placeholder {
       color: #f9f9f9bd;
+}
+
+@media screen and (max-width: 900px) {
+      .img-fluid {
+            display: none;
+      }
+      .rs_form {
+            width: 100%;
+      }
 }

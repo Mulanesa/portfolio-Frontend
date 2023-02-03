@@ -1,0 +1,19 @@
+fa-icon {
+      margin-right: 20px;
+}
+.fa_deco {
+      color: #f9f9f9;
+      cursor: pointer;
+      transition: .5s, color .10s;
+}
+.fa_deco:hover {
+      color: #f9f9f9bd;
+}
+@media screen and (max-width: 900px) {
+      .float-end {
+            float: none!important;
+      }
+      p {
+            text-align: center;
+      }
+}

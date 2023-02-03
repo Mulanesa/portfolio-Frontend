@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { Page404Component } from './components/page404/page404.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { Page404Component } from './components/page404/page404.component';
     LoginComponent,
     NavbarComponent,
     PortfolioComponent,
-    Page404Component
+    Page404Component,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
