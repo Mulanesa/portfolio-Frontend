@@ -10,7 +10,10 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 export class PortfolioComponent implements OnInit {
-  basic: string = 'Basic';
+  html: string = 'Basic';
+  css: string = 'Basic';
+  javascript: string = 'Basic';
+  angular: string = 'Basic';
   faXmark = faXmark;
 
   constructor(public modal: NgbModal) { }

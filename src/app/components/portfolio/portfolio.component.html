@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<ng-template #htmlmodal let-modal>
+<ng-template #lineage2modal let-modal>
       <div class="modal-header">
             <h4 class="modal-title text-center">FrontEnd Lineage 2</h4>
             <button type="button" class="close_btn" aria-label="Close" (click)="modal.dismiss('Cross click')"><fa-icon [icon]="faXmark"></fa-icon></button>
@@ -9,7 +9,7 @@
       </div>
 </ng-template>
 <main>
-      <section>
+      <section data-aos="zoom-in-up" data-aos-duration="1000">
             <div class="container-fluid vh-100 p-5 dv_center" id="aboutme">
                   <div class="col-md-6 px-0">
                         <h5 class="sb_font">Buenas, soy</h5>
@@ -26,44 +26,44 @@
       <section>
             <div class="container-fluid p-5" id="skills">
                   <h2 class="h_font text-center">Mis Habilidades</h2>
-                  <div class="c-skills">
-                        <div class="s-card p-2">
+                  <div class="c-skills row">
+                        <div class="s-card col-6 p-2" data-aos="zoom-in-up" data-aos-duration="2000">
                               <img class="dshadow_i" src="../../../assets/img/habilidades/lhtml.svg" alt="Logo de HTML5" style="width: 100%;">
                               <div class="b-card p-3">
                                     <h4 class="s_font">HTML</h4>
                                     <hr class="hr" style="margin-top: 10px;">
                                     <div class="my-3">
-                                          <p><strong>Nivel: </strong><i>{{basic}}</i></p>
+                                          <p><strong>Nivel: </strong><i>{{html}}</i></p>
                                     </div>
                               </div>
                         </div>
-                        <div class="s-card p-2">
+                        <div class="s-card col-6 p-2" data-aos="zoom-in-up" data-aos-duration="2000">
                               <img class="dshadow_i" src="../../../assets/img/habilidades/lcss3.svg" alt="Logo de CSS3" style="width: 100%;">
                               <div class="b-card p-3">
                                     <h4 class="s_font">CSS</h4>
                                     <hr class="hr" style="margin-top: 10px;">
                                     <div class="my-3">
-                                          <p><strong>Nivel: </strong><i>{{basic}}</i></p>
+                                          <p><strong>Nivel: </strong><i>{{css}}</i></p>
                                     </div>
                               </div>
                         </div>
-                        <div class="s-card p-2">
+                        <div class="s-card col-6 p-2" data-aos="zoom-in-up" data-aos-duration="2000">
                               <img class="dshadow_i" src="../../../assets/img/habilidades/ljs.svg" alt="Logo de JS" style="width: 100%;">
                               <div class="b-card p-3">
                                     <h4 class="s_font">JavaScript</h4>
                                     <hr class="hr" style="margin-top: 10px;">
                                     <div class="my-3">
-                                          <p><strong>Nivel: </strong><i>{{basic}}</i></p>
+                                          <p><strong>Nivel: </strong><i>{{javascript}}</i></p>
                                     </div>
                               </div>
                         </div>
-                        <div class="s-card p-2">
+                        <div class="s-card col-6 p-2" data-aos="zoom-in-up" data-aos-duration="2000">
                               <img class="dshadow_i" src="../../../assets/img/habilidades/langular.svg" alt="Logo de Angular" style="width: 100%;">
                               <div class="b-card p-3">
                                     <h4 class="s_font">Angular</h4>
                                     <hr class="hr" style="margin-top: 10px;">
                                     <div class="my-3">
-                                          <p><strong>Nivel: </strong><i>{{basic}}</i></p>
+                                          <p><strong>Nivel: </strong><i>{{angular}}</i></p>
                                     </div>
                               </div>
                         </div>
@@ -73,8 +73,8 @@
       <section>
             <div class="container-fluid p-5" id="proyectos">
                   <h2 class="p_font text-center">Proyectos Personales</h2>
-                  <div class="dv_center">
-                        <div class="p-card" (click)="openCenteredLG(htmlmodal)">
+                  <div class="dv_center row" data-aos="zoom-in-up" data-aos-duration="2000">
+                        <div class="p-card my-3 col-6" (click)="openCenteredLG(lineage2modal)">
                               <img class="dshadow_i" src="../../../assets/img/proyectos/ll2.png" alt="Logo de HTML5" style="width: 100%;">
                         </div>
                   </div>
@@ -83,7 +83,7 @@
       <section>
             <div class="container-fluid p-5" id="contact">
                   <h2 class="h_font text-center">Contactame</h2>
-                  <form action="#">
+                  <form action="#" data-aos="zoom-in-up" data-aos-duration="2000">
                         <div class="mb-3">
                               <label for="name" class="form-label">Nombre</label>
                               <input type="textname" class="form-control" id="name" placeholder="Nombre">

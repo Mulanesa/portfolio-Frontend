@@ -46,7 +46,7 @@
       -webkit-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
       -moz-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
       box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
-      background-color: #f7a501;
+      background-color: #f7a501bd;
 }
 
 .h_font {
@@ -157,16 +157,15 @@
 }
 
 .p-card:hover {
-      width: 220px;
-      margin-top: 10px;
-      transform: translate(0px,-20px);
-      -webkit-transform: translate(0px,-20px);
-      -moz-transform:translate(0px,-20px);
+      width: 210px;
+      transform: translate(0px,-10px);
+      -webkit-transform: translate(0px,-10px);
+      -moz-transform:translate(0px,-10px);
 }
 
 /* Contact */
 #contact {
-      background: #f7a501;
+      background: #f7a501bd;
       -webkit-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
       -moz-box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
       box-shadow: inset 0px 0px 50px 10px rgba(0,0,0,0.75);
