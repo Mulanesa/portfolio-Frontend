@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+//Modal
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+//Icons
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
-
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -10,11 +12,8 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
 export class PortfolioComponent implements OnInit {
-  html: string = 'Basic';
-  css: string = 'Basic';
-  javascript: string = 'Basic';
-  angular: string = 'Basic';
-  faXmark = faXmark;
+  html: string = 'Basic'; css: string = 'Basic';  javascript: string = 'Basic'; angular: string = 'Basic';
+  faXmark = faXmark; faLinkedin = faLinkedin; faGithub = faGithub; faTwitter = faTwitter;
 
   constructor(public modal: NgbModal) { }
 
