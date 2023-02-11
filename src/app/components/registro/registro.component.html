@@ -1,0 +1,36 @@
+<div class="text-center">
+      <form method="post">
+        <div class="modal_header">
+          <h1>Registro</h1>
+        </div>
+        <div class="modal-body">
+          <input
+            type="email"
+            [(ngModel)]="email"
+            name="email"
+            placeholder="Email"
+            required="required"
+            class="form-control mb-3"
+          />
+          <input
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            placeholder="Contraseña"
+            required="required"
+            class="form-control mb-3"
+          />
+          <input
+          type="password"
+          [(ngModel)]="confirmPassword"
+          name="password"
+          placeholder="Confirma la contraseña"
+          required="required"
+          class="form-control mb-3"
+          />
+          <button type="submit" (click)="register()">Registrarse</button>
+          <div class="my-1">
+          </div>
+        </div>
+      </form>
+</div>

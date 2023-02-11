@@ -1,18 +1,10 @@
 {
-      "user": [
-            {
-                  "id": 1,
-                  "name": "Mulanesa",
-                  "age": 18,
-                  "description": "Desarrollador Web Jr Full Stack",
-                  "avatar": "http://"
-            },
-            {
-                  "id": 2,
-                  "name": "Mulanesa2",
-                  "age": 18,
-                  "description": "Desarrollador Web Jr Full Stack",
-                  "avatar": "http://"
-            }
-      ]
+  "user": [
+    {
+      "email": "neyencoria@gmail.com",
+      "username": "MulanesaDev",
+      "password": "1234",
+      "id": 1
+    }
+  ]
 }

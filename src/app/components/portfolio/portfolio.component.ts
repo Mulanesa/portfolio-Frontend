@@ -12,7 +12,7 @@ import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-ic
 
 
 export class PortfolioComponent implements OnInit {
-  html: string = 'Basic'; css: string = 'Basic';  javascript: string = 'Basic'; angular: string = 'Basic';
+  html: string = 'Intermedio'; css: string = 'Basic';  javascript: string = 'Basic'; angular: string = 'Intermedio';
   faXmark = faXmark; faLinkedin = faLinkedin; faGithub = faGithub; faTwitter = faTwitter;
 
   constructor(public modal: NgbModal) { }

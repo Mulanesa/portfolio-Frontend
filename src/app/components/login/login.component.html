@@ -1,4 +1,78 @@
-<main>
+<div class="text-center">
+      <form method="post">
+        <div class="modal_header">
+          <h1>Login</h1>
+        </div>
+        <div class="modal-body">
+          <input
+            type="email"
+            [(ngModel)]="email"
+            name="email"
+            placeholder="Email"
+            required="required"
+            class="form-control mb-3"
+          />
+          <input
+            type="password"
+            [(ngModel)]="password"
+            name="password"
+            placeholder="Contraseña"
+            required="required"
+            class="form-control mb-3"
+          />
+          <button type="submit" (click)="login()">LogIn</button>
+          <div class="my-1">
+          </div>
+        </div>
+      </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<main>
       <div class="text-center" id="login_container">
             <form [formGroup]="form" (ngSubmit)="onEnviar($event)">
                   <h1 class="h3 m-3 pt-3">Iniciar sesión</h1>
@@ -12,7 +86,7 @@
                                     Ingresa un email válido.
                               </p>
                               <p *ngIf="Mail?.hasError('email')" class="error text-start ms-1">
-                                    Correo Electronico invalido.
+                                    Email invalido.
                               </p>
                         </div>
                   </div>
@@ -39,7 +113,7 @@
             </form>
       </div>
 </main>
-<!--<div>
+<div>
       <p>Un debuger para mostrar que es posible hacer un binding directo al formulario <strong>{{form.value.email}} </strong><strong>{{form.value.password}} </strong><p> 
 
 <br>

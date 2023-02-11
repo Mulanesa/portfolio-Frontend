@@ -4,11 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { Page404Component } from './components/page404/page404.component';
-
 const routes: Routes = [
   {path: 'login', title: 'Login', component:LoginComponent},
   {path: 'portfolio', title: 'MulanesaDev', component:PortfolioComponent},
-
   // Pagina Inicial.
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   // Page Error404 Routing

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './data/services/auth.service';
+//Animate on scroll
 import * as AOS from 'aos'
 
 @Component({
@@ -8,8 +8,7 @@ import * as AOS from 'aos'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'Presentacion';
-  authService = AuthService;
+  title = 'Portfolio';
 
   constructor() { }
 
