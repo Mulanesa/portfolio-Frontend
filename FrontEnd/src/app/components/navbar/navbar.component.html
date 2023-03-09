@@ -1,0 +1,37 @@
+<ng-template #loginmodal let-modal>
+      <app-login></app-login>
+      <div class="modal_header">
+        <button type="button" class="close_btn px-2" aria-label="Close" (click)="modal.dismiss('Cross click')"><fa-icon [icon]="faXmark"></fa-icon></button>
+      </div>
+      <div class="modal-footer">
+        <p>¿No estas registrado? <i (click)="openModal(registromodal)">Registro</i></p>
+      </div>
+</ng-template>
+<ng-template #registromodal let-modal>
+  <app-registro></app-registro>
+  <div class="modal_header">
+    <button type="button" class="close_btn px-2" aria-label="Close" (click)="modal.dismiss('Cross click')"><fa-icon [icon]="faXmark"></fa-icon></button>
+  </div>
+  <div class="modal-footer">
+    <p>¿Ya tienes cuenta? <i (click)="modal.close()">Login</i></p>
+  </div>
+</ng-template>
+<app-redes></app-redes>
+<nav class="barranav navbar navbar-expand-lg nav-masthead">
+      <div class="container-fluid">
+        <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" class="navbar-brand fw-bold" target="_blank">
+          <img class="d_shadow" src="../../../../../assets/img/argpro.png" alt="Imagen del Logo de Argentina Programa" width="100px">
+        </a>
+        <div class="nav" id="navbarNav">
+          <ul class="nav">
+            <!--<li class="nav-item"><a class="nav-link fontNav" (click)="onClickScroll('skills')">Skills</a></li>
+            <li class="nav-item"><a class="nav-link fontNav" (click)="onClickScroll('proyectos')">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link fontNav" (click)="onClickScroll('contact')">Contacto</a></li> -->
+            <li class="nav-item"><a class="nav-link fontNav" (click)="openModal(loginmodal)">Login</a></li>
+            <!--<li class="nav-item"><a class="nav-link fontNav" routerLink="/login" routerLinkActive="active" *ngIf="authService.logIn">Profile</a></li>
+            <li class="nav-item"><a class="nav-link fontNav" routerLink="/login" routerLinkActive="active" *ngIf="!authService.logIn">Login</a></li>
+            <li class="nav-item"><a class="nav-link fontNav" (click)="logout()" href="#" *ngIf="authService.logIn">Logout</a></li>-->
+          </ul>
+        </div>
+      </div>
+</nav>

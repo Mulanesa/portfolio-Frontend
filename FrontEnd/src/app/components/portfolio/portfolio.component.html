@@ -1,0 +1,45 @@
+<ng-template #lineage2modal let-modal>
+      <div class="modal-header">
+            <h4 class="modal-title text-center">FrontEnd Lineage 2</h4>
+            <button type="button" class="close_btn" aria-label="Close" (click)="modal.dismiss('Cross click')"><fa-icon [icon]="faXmark"></fa-icon></button>
+      </div>
+      <div class="modal-body">
+            <p>Estoy trabajando en un proyecto propio</p>
+      </div>
+</ng-template>
+<main>
+      <app-header></app-header>
+      <app-acerca-de></app-acerca-de>
+      <app-experiencia></app-experiencia>
+      <app-skills></app-skills>
+      <app-proyectos></app-proyectos>
+      <!--<section>
+            <div class="container-fluid p-5" id="contact">
+                  <div class="dv_center">
+                        <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
+                              <h3>Contactame</h3>
+                              <hr style="margin-right: 10%;">
+                              <p class="lead fs-5">E-mail:<br><a href="mailto:mulanesadev@contact.com">mulanesadev@contact.com</a></p>
+                              <a class="f_deco" href="#linkedin" target="_blank"><fa-icon [icon]="faLinkedin"></fa-icon></a>
+                              <a class="f_deco" href="#github" target="_blank"><fa-icon [icon]="faGithub"></fa-icon></a>
+                              <a class="f_deco" href="#twitter" target="_blank"><fa-icon [icon]="faTwitter"></fa-icon></a>
+                        </div>
+                        <form class="rs_form" action="#" data-aos="fade-up" data-aos-duration="1000">
+                              <div class="mb-3">
+                                    <label for="name" class="form-label">Nombre</label>
+                                    <input type="textname" class="form-control" id="name" placeholder="Nombre">
+                              </div>
+                              <div class="mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Email">
+                              </div>
+                              <div class="mb-3">
+                                    <label for="textarea" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="textarea" rows="6" placeholder="Mensaje"></textarea>
+                              </div>
+                              <button type="button" class="btn btn-warning">Enviar</button>
+                        </form>
+                  </div>
+            </div>
+      </section>-->
+</main>

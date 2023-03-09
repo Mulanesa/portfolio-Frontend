@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+      --color1: #f9f9f9;
+      --colortext: #000;
+}
+
+
+/* Global Cards for Sections */
+
+
+.exp_card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.exp_container {
+      width: 1100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0px 20px;
+}
+.exp_container .exp_body {
+      height: 100%;
+      width: 100%;
+      margin: 10px;
+      padding: 20px 15px;
+      border-radius: 15px;
+      background-color: #003566;
+      color: #fff;
+      box-shadow : 0 5px 20px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 992px) {
+      .exp_container .exp_body {
+            margin: 20px 0px;
+      }
+      .exp_body .row {
+            text-align: center;
+      }
+}

@@ -1,0 +1,16 @@
+.redes_nav {
+      display: flex;
+      justify-content: end;
+      align-items: end;
+      background-color: #003566;
+}
+
+.redes_nav a {
+      color: #1a1c1e;
+      margin: 0px 10px 0px 10px;
+      transition: color .5s;
+}
+
+.redes_nav a:hover {
+      color:#1a1c1ebd;
+}
