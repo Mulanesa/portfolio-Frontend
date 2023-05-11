@@ -1,0 +1,35 @@
+<div class="container" *ngIf="persona && isLogged && hasAdminRole()">
+      <div class="row">
+          <div>
+            <h1 class="text-center">Editor de Acerca de</h1>
+              <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                  <div class="form-group">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="apellido">Apellido</label>
+                      <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="persona.titulo" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="acercade">Acerca de mi</label>
+                    <textarea type="text" class="form-control" id="acercade" name="acercade" rows="5" [(ngModel)]="persona.descripcion" required></textarea>
+                    </div>
+                  <div class="form-group">
+                    <label for="img">Url de la imagen</label>
+                    <input type="text" class="form-control" id="img" name="img" [(ngModel)]="persona.img" required>
+                    <p>Vista previa de la imagen:</p>
+                    <div class="img_crud"><img [src]="persona.img" alt="Imagen" width="260px" height="260px"></div>
+                  </div>
+                  <button class="btn btn-warning">
+                      Guardar Cambios
+                  </button>
+                  <a href="./" style="display: flex; place-content: center; margin-top: 5px;">Volver</a>
+              </form>
+          </div>
+      </div>
+</div>

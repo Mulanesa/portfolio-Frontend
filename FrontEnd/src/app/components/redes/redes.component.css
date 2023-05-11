@@ -6,11 +6,11 @@
 }
 
 .redes_nav a {
-      color: #1a1c1e;
+      color: #f9f9f9;
       margin: 0px 10px 0px 10px;
       transition: color .5s;
 }
 
 .redes_nav a:hover {
-      color:#1a1c1ebd;
+      color:#f9f9f9bd;
 }

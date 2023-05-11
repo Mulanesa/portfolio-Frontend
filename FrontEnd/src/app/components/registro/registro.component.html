@@ -1,34 +1,42 @@
 <div class="text-center">
-      <form method="post">
+      <form (ngSubmit)="onCrearCuenta()">
         <div class="modal_header">
           <h1>Registro</h1>
         </div>
         <div class="modal-body">
+            <input
+            type="text"
+            name="nombre"
+            [(ngModel)]="nombre"
+            placeholder="Nombre"
+            required="required"
+            class="form-control mb-3"
+          />
+          <input
+            type="text"
+            name="usuario"
+            [(ngModel)]="nombreUsuario"
+            placeholder="Nombre de Usuario"
+            required="required"
+            class="form-control mb-3"
+          />
           <input
             type="email"
-            [(ngModel)]="email"
             name="email"
-            placeholder="Email"
+            [(ngModel)]="email"
+            placeholder="E-mail"
             required="required"
             class="form-control mb-3"
           />
           <input
             type="password"
-            [(ngModel)]="password"
             name="password"
             placeholder="Contraseña"
+            [(ngModel)]="password"
             required="required"
             class="form-control mb-3"
           />
-          <input
-          type="password"
-          [(ngModel)]="confirmPassword"
-          name="password"
-          placeholder="Confirma la contraseña"
-          required="required"
-          class="form-control mb-3"
-          />
-          <button type="submit" (click)="register()">Registrarse</button>
+          <button type="submit">Registrarse</button>
           <div class="my-1">
           </div>
         </div>

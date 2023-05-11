@@ -1,18 +1,19 @@
 <div class="container-fluid">
       <div class="sobremi_card">
             <div class="sm_container">
-                  <div class="sm_tt">
+                  <div class="sm_tt" *ngFor="let persona of persona">
                         <div class="sm_card_img">
-                              <img src="../../../assets/img/avatartest.png" alt="#">
+                              <img [src]="persona.img" alt="#">
                         </div>
                         <div class="sm_content">
-                              <h3>Neyen Coria</h3>
-                              <p>Programador web full-stack trainee</p>
+                              <h3>{{persona.nombre}} {{persona.apellido}}</h3>
+                              <p>{{persona.titulo}}</p>
                         </div>
                         <div class="sm_content2">
                               <h3>Acerca de mi</h3>
-                              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati amet possimus quae commodi modi ut accusamus cupiditate consectetur. Impedit doloribus praesentium dolore consequatur temporibus! Eveniet provident tempore laborum aliquid qui.</p>
+                              <p>{{persona.descripcion}}</p>
                         </div>
+                        <button type="button" class="btn btn-warning" routerLink="/editaracercade/{{persona.id}}" *ngIf="isLogged && hasAdminRole()" style="position: absolute; right: 20px;"><fa-icon [icon]="faPenToSquare"></fa-icon>Editar</button>
                   </div>
             </div>
       </div>

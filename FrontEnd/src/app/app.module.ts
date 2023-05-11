@@ -23,6 +23,14 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia/edit-experiencia.component';
+import { NewEducacionComponent } from './components/experiencia/new-educacion/new-educacion.component';
+import { EditEducacionComponent } from './components/experiencia/edit-educacion/edit-educacion.component';
+import { NewSkillComponent } from './components/skills/new-skill/new-skill.component';
+import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
+import { EditarAcercaComponent } from './components/acerca-de/editar-acerca/editar-acerca.component';
 
 
 @NgModule({
@@ -40,6 +48,13 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     ExperienciaComponent,
     SkillsComponent,
     ProyectosComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent,
+    NewSkillComponent,
+    EditSkillComponent,
+    EditarAcercaComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +67,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     HttpClientModule,
     NgCircleProgressModule.forRoot({})
   ],
-  providers: [CookieService],
+  providers: [CookieService, interceptorProvider],
   bootstrap: [AppComponent]
 })
 

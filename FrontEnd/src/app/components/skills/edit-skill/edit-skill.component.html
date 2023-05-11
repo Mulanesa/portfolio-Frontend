@@ -1,0 +1,27 @@
+<div class="container" *ngIf="skill && isLogged && hasAdminRole()">
+      <div class="row">
+          <div>
+            <h1 class="text-center">Editar lenguaje/habilidad</h1>
+              <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                  <div class="form-group">
+                      <label for="nombre">Nombre del lenguaje/habilidad</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="skill.nombre" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="porcentaje">Porcentaje (1min - 100max)</label>
+                      <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="imgURL">Url de la imagen</label>
+                    <input type="text" class="form-control" id="imgURL" name="imgURL" [(ngModel)]="skill.imgURL" required>
+                    <p>Vista previa de la imagen:</p>
+                    <div class="img_crud"><img [src]="skill.imgURL" alt="Imagen" width="200px" height="200px"></div>
+                  </div>
+                  <button class="btn btn-warning">
+                      Guardar Cambios
+                  </button>
+                  <a href="./" style="display: flex; place-content: center; margin-top: 5px;">Volver</a>
+              </form>
+          </div>
+      </div>
+</div>

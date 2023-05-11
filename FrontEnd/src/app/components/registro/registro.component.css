@@ -1,6 +1,6 @@
 /* Modal */
 .modal-body, .modal-footer, .modal_header {
-      background-color: #1A1C1E;
+      background-color: #000813;
       color:#f9f9f9;
     }
     .modal_header {
@@ -27,6 +27,7 @@
       text-transform: uppercase;
       background-color: #f7a501bd;
       color: #f9f9f9;
+      border: none;
     }
     
     .modal-body button:hover {

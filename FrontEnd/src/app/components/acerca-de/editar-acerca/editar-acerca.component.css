@@ -1,0 +1,26 @@
+.container {
+      background: #003566;
+      padding: 50px;
+      color: #f9f9f9;
+      margin: 10px auto;
+      border-radius: 15px;
+}
+
+.container .img_crud {
+      display: flex;
+      margin: 20px auto;
+      place-content: center;
+}
+
+.container button {
+      width: 100%;
+      color: #000;
+}
+
+.container label {
+      margin: 5px 0px;
+}
+
+.container a {
+      color: white;
+}

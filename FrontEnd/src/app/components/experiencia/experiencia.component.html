@@ -1,48 +1,60 @@
 <div class="container-fluid">
-      <div class="exp_card">
-            <div class="exp_container">
-                  <div class="exp_body">
-                        <div class="row">
-                              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                    <div style="display: inline-flex;">
-                                          <p class="st_icon">
-                                                <fa-icon [icon]="faLaptopFile"></fa-icon>
-                                          </p>
-                                          <h3>Experiencia Laboral</h3>
-                                    </div>
-                                    <hr/>
-                                    <div>
-                                          
-                                          <h5>Trabajo 1</h5> - <i>(year)</i>
-                                          <p>- <i>Descripcion de lo realizado</i></p>
-                                    </div>
-                                    <div>
-                                          <h5>Trabajo 2</h5> - <i>(year)</i>
-                                          <p>- <i>Descripcion de lo realizado</i></p>
-                                          
-                                    </div>
-                                    <hr/>
-                              </div>
-                              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                    <div style="display: inline-flex;">
-                                          <p class="st_icon">
-                                                <fa-icon [icon]="faBookOpen"></fa-icon>
-                                          </p>
-                                          <h3>Educacion</h3>
-                                    </div>
-                                    <hr/>
-                                    <div>
-                                          <h5>Primario</h5> - <i>(Completo)</i>
-                                          <p>- <i>Escuela -0 -0 -0 </i></p>
-                                    </div>
-                                    <div>
-                                          <h5>Secundario</h5> - <i>(Cursando)</i>
-                                          <p>- <i>Escuela -0 -0 -0</i></p>
-                                    </div>
-                                    <hr/>
-                              </div>
-                        </div>
-                  </div>
+  <div class="exp_card">
+    <div class="exp_container">
+      <div class="exp_body">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div style="display: inline-flex">
+              <p class="st_icon">
+                <fa-icon [icon]="faLaptopFile"></fa-icon>
+              </p>
+              <h3>Experiencia Laboral</h3>
+              <button
+              type="button"
+              class="btn btn-danger mx-2"
+              routerLink="/nuevaexperiencia"
+              *ngIf="isLogged && hasAdminRole()"
+            >
+              <fa-icon [icon]="faPlus"></fa-icon>
+            </button>
             </div>
+            <hr />
+            <div *ngFor="let Experiencia of expe">
+              <h5>{{ Experiencia.nombreE }}</h5>
+              <p>- <i>{{ Experiencia.descripcionE }}</i></p>
+              <button type="button" class="btn btn-warning" routerLink="/editarexperiencia/{{Experiencia.id}}" *ngIf="isLogged && hasAdminRole()" style="margin-right: 5px;"><fa-icon [icon]="faPenToSquare"></fa-icon>Editar</button>
+              <button type="button" class="btn btn-warning" (click)="delete(Experiencia.id)" *ngIf="isLogged && hasAdminRole()"><fa-icon [icon]="faTrash"></fa-icon>Borrar</button>
+            </div>
+            <hr />
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div style="display: inline-flex">
+              <p class="st_icon">
+                <fa-icon [icon]="faBookOpen"></fa-icon>
+              </p>
+              <h3>Educacion</h3>
+              <button
+              type="button"
+              class="btn btn-danger mx-2"
+              routerLink="/nuevaeducacion"
+              *ngIf="isLogged && hasAdminRole()"
+              >
+                <fa-icon [icon]="faPlus"></fa-icon>
+              </button>
+            </div>
+            <hr />
+            <div *ngFor="let Educacion of educacion">
+              <div>
+                <h5>{{ Educacion.nombreE }}</h5>
+                <p>- <i>{{ Educacion.descripcionE }}</i></p>
+                <button type="button" class="btn btn-warning" routerLink="/editareducacion/{{Educacion.id}}" *ngIf="isLogged && hasAdminRole()" style="margin-right: 5px;"><fa-icon [icon]="faPenToSquare"></fa-icon>Editar</button>
+                <button type="button" class="btn btn-warning" (click)="deleteE(Educacion.id)" *ngIf="isLogged && hasAdminRole()"><fa-icon [icon]="faTrash"></fa-icon>Borrar</button>  
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
 </div>

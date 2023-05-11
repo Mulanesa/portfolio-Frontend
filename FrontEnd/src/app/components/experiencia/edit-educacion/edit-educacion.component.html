@@ -1,0 +1,21 @@
+<div class="container" *ngIf="educacion && isLogged && hasAdminRole()">
+      <div class="row">
+          <div>
+            <h1 class="text-center">Editor de Educacion</h1>
+              <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                  <div class="form-group">
+                      <label for="nombreE">Nombre de la Escuela</label>
+                      <input type="text" class="form-control" id="nombreE" name="nombreE" [(ngModel)]="educacion.nombreE" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="descripcionE">Descripcion de los estudios</label>
+                      <textarea row="3" type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="educacion.descripcionE" required></textarea>
+                  </div>
+                  <button class="btn btn-warning">
+                    Guardar Cambios
+                  </button>
+                  <a href="./" style="display: flex; place-content: center; margin-top: 5px;">Volver</a>
+              </form>
+          </div>
+      </div>
+</div>

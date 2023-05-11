@@ -3,7 +3,6 @@
 
 label {
       color: gray;
-      font-family: 'Signika', sans-serif;
 }
 input {
       background: #181818;
@@ -12,8 +11,7 @@ input {
 form {
       background-color: #f7a501;
       border-radius: 5px;
-      font-family: 'Signika', sans-serif;
-      color: #f9f9f9;
+      color: #000;
 }
 
 /*  Login Container  */
@@ -96,8 +94,8 @@ form {
 
 /* Modal */
 .modal-body, .modal-footer, .modal_header {
-      background-color: #1A1C1E;
-      color:#f9f9f9;
+      background-color: #000813;
+      color:#fff;
     }
     .modal_header {
       padding: 5px 0px 1px 0px;
@@ -126,7 +124,8 @@ form {
       margin-left: 2px;
       text-transform: uppercase;
       background-color: #f7a501bd;
-      color: #f9f9f9;
+      border: none;
+      color: #fff;
     }
     
     .modal-body button:hover {
@@ -135,7 +134,7 @@ form {
     
     .modal-body input {
       background-color: #f7a501bd;
-      color: #f9f9f9;
+      color: #fff;
     }
     
     .close_btn {
@@ -156,7 +155,7 @@ form {
     }
     
     ::-webkit-input-placeholder {
-      color: #f9f9f9;
+      color: #fff;
     }
     
     i {

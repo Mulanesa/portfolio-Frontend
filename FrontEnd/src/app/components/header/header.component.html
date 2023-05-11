@@ -1,8 +1,10 @@
 <div class="container-fluid vh-100 p-5 dv_center" id="header" data-aos="zoom-in-up" data-aos-duration="1000">
       <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 px-0">
             <h5 class="sb_font">Buenas, soy</h5>
-            <h1 class="display-5 s_font">Mulanesa</h1>
-            <h5 class="sb_font">Programador web full-stack trainee</h5>
+            <div *ngFor="let persona of persona">
+                  <h1 class="display-5 s_font">{{persona.nombre}} {{persona.apellido}}</h1>
+                  <h5 class="sb_font">{{persona.titulo}}</h5>
+            </div>
             <p class="lead fs-5">Les doy la bienvenida a mi portfolio web!.</p>
       </div>
       <img class="img-fluid dshadow_i rs_img" src="../../../assets/img/svg/web_developer_1.svg" alt="Persona sentada en una silla al lado de un escritorio, en el que hay una notebook encima y la persona la esta utilizando" id="#a-imgwd" loading="lazy">

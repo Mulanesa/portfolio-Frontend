@@ -4,8 +4,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 //Icons
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
-//Services
-import { UsersService } from 'src/app/data/services/users/users.service';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -17,16 +15,11 @@ export class PortfolioComponent implements OnInit {
   html: string = 'Intermedio'; css: string = 'Basic';  javascript: string = 'Basic'; angular: string = 'Intermedio';
   faXmark = faXmark; faLinkedin = faLinkedin; faGithub = faGithub; faTwitter = faTwitter;
 
-  constructor(public modal: NgbModal, public userService: UsersService) { }
+  constructor(public modal: NgbModal,) { }
 
   ngOnInit(): void {
-    this.getUserLogged()
   }
-  getUserLogged() {
-    this.userService.getUser().subscribe(user => {
-      console.log(user);
-    })
-  }
+  
   openCenteredSM(contenido: any) {
     this.modal.open(contenido, { centered: true, size: 'sm' });
   }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/data/services/users/users.service';
 import { Router } from '@angular/router';
-
+import { LoginUsuario } from 'src/app/model/login-usuario';
+import { AuthService } from 'src/app/service/auth.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-login',
@@ -10,20 +11,42 @@ import { Router } from '@angular/router';
 })
 
 export class LoginComponent implements OnInit {
-  email: string = '';
-  password: string = '';
+  isLogged = false;
+  isLogginFail = false;
+  loginUsuario!: LoginUsuario
+  nombreUsuario!: string;
+  password!: string;
+  roles: string[] = [];
+  errMsj!: string;
 
 
-  constructor(public userService: UsersService, public router: Router){ }
+  constructor(private tokenService: TokenService, private authService: AuthService, private router: Router){ }
 
 
-  login() {
-    const user = {email: this.email, password: this.password};
-    this.userService.login(user).subscribe( data => {
-      this.userService.setToken(data.token);
-      this.router.navigateByUrl('/');
-    });
+  ngOnInit(): void {
+    if(this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.isLogginFail = false;
+      this.roles = this.tokenService.getAuthorities();
+    }
   }
 
-  ngOnInit() {}
+  onLogin(): void{
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
+    this.authService.login(this.loginUsuario).subscribe(data =>{
+        this.isLogged = true;
+        this.isLogginFail = false;
+        this.tokenService.setToken(data.token);
+        this.tokenService.setUsername(data.nombreUsuario);
+        this.tokenService.setAuthorities(data.authorities);
+        this.roles = data.authorities;
+        alert("Sesión iniciada");
+        window.location.reload();
+      }, err =>{
+        this.isLogged = false;
+        this.isLogginFail = true;
+        this.errMsj = err.error.mensaje;
+        alert(this.errMsj);
+      })
+  }
 }

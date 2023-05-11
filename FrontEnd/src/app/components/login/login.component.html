@@ -1,15 +1,16 @@
 <div class="text-center">
-      <form method="post">
+      <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
         <div class="modal_header">
           <h1>Login</h1>
         </div>
         <div class="modal-body">
           <input
-            type="email"
-            [(ngModel)]="email"
-            name="email"
-            placeholder="Email"
+            type="text"
+            [(ngModel)]="nombreUsuario"
+            name="nombreUsuario"
+            placeholder="Usuario"
             required="required"
+            id="nombreUsuario"
             class="form-control mb-3"
           />
           <input
@@ -20,7 +21,7 @@
             required="required"
             class="form-control mb-3"
           />
-          <button type="submit" (click)="login()">LogIn</button>
+          <button type="submit">LogIn</button>
           <div class="my-1">
           </div>
         </div>

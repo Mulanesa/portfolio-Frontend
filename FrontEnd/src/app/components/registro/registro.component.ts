@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { UsersService } from 'src/app/data/services/users/users.service';
+import { Component } from '@angular/core';
+import { AuthService } from 'src/app/service/auth.service';
+import { NuevoUsuario } from 'src/app/model/nuevo-usuario';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-registro',
@@ -10,25 +10,28 @@ import { Router } from '@angular/router';
 })
 
 
-export class RegistroComponent implements OnInit {
-  email: string = '';
-  password: string = '';
-  confirmPassword: string = '';
+export class RegistroComponent {
+  nombre: string;
+  nombreUsuario: string;
+  email: string;
+  password: string;
 
-
-  constructor(public userService: UsersService, public router: Router) { }
-
-  register() {
-    const user = { email: this.email, password: this.password };
-    this.userService.register(user).subscribe(data => {
-      this.userService.setToken(data.token);
-      this.router.navigateByUrl('/portfolio');
-    },
-    error => {
-      console.log(error);
-    });
-  }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void { }
+
+  onCrearCuenta(): void {
+    const nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario, this.email, this.password);
+    this.authService.nuevo(nuevoUsuario).subscribe(
+      data => {
+        alert("Cuenta registrada exitosamente - Ya puedes ingresar en tu cuenta.");
+        window.location.reload();
+      },
+      error => {
+        alert("La cuenta no se pudo registrar, intente nuevamente.");
+        this.router.navigate(['']);
+      }
+    );
+  }
 
 }
